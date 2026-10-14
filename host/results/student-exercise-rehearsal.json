@@ -1,0 +1,131 @@
+{
+  "baseline": {
+    "hits": 2,
+    "total": 24,
+    "mean_miss": 0.3845003007353403,
+    "configuration": {
+      "data": "original",
+      "geometry": false,
+      "contact_weight": 1,
+      "width": 48,
+      "epochs": 40,
+      "seed": 42
+    },
+    "comparison": null
+  },
+  "contacts": {
+    "hits": 0,
+    "total": 24,
+    "mean_miss": 0.5446409360347878,
+    "configuration": {
+      "data": "original",
+      "geometry": false,
+      "contact_weight": 5.0,
+      "width": 48,
+      "epochs": 40,
+      "seed": 42
+    },
+    "comparison": {
+      "name": "rehearsal-baseline",
+      "changed_settings": {
+        "contact_weight": [
+          1,
+          5.0
+        ]
+      },
+      "new_successes": [],
+      "new_failures": [
+        6,
+        21
+      ]
+    }
+  },
+  "geometry": {
+    "hits": 0,
+    "total": 24,
+    "mean_miss": 0.4103419892173377,
+    "configuration": {
+      "data": "original",
+      "geometry": true,
+      "contact_weight": 1,
+      "width": 48,
+      "epochs": 40,
+      "seed": 42
+    },
+    "comparison": {
+      "name": "rehearsal-baseline",
+      "changed_settings": {
+        "geometry": [
+          false,
+          true
+        ]
+      },
+      "new_successes": [],
+      "new_failures": [
+        6,
+        21
+      ]
+    }
+  },
+  "expanded": {
+    "hits": 0,
+    "total": 24,
+    "mean_miss": 0.507745037784275,
+    "configuration": {
+      "data": "expanded",
+      "geometry": true,
+      "contact_weight": 1,
+      "width": 48,
+      "epochs": 40,
+      "seed": 42
+    },
+    "comparison": {
+      "name": "rehearsal-geometry",
+      "changed_settings": {
+        "data": [
+          "original",
+          "expanded"
+        ]
+      },
+      "new_successes": [],
+      "new_failures": []
+    }
+  },
+  "free-head": {
+    "hits": 13,
+    "total": 24,
+    "mean_miss": 0.10074647115364245,
+    "configuration": {
+      "data": "original",
+      "geometry": false,
+      "free_head": true,
+      "contact_weight": 1,
+      "width": 48,
+      "epochs": 40,
+      "seed": 42
+    },
+    "comparison": {
+      "name": "rehearsal-baseline",
+      "changed_settings": {
+        "free_head": [
+          false,
+          true
+        ]
+      },
+      "new_successes": [
+        0,
+        2,
+        3,
+        4,
+        11,
+        13,
+        14,
+        17,
+        19,
+        22,
+        23
+      ],
+      "new_failures": []
+    }
+  }
+}

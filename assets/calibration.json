@@ -1,0 +1,16 @@
+{
+  "parameters": {
+    "drag": 0.9850000000000001,
+    "wall_restitution": 0.8499999999999996,
+    "bumper_restitution": 0.8500000000000002
+  },
+  "training_seed": 71,
+  "training_samples": 30000,
+  "regime_counts": {
+    "free": 29068,
+    "wall_components": 789,
+    "bumper": 146
+  },
+  "knowledge": "Known position integration, table and bumper geometry, contact normal response. Only drag and restitution are fitted. This is a calibrated physical model, not another neural network.",
+  "training_sha256": "3891674da2bd8276090828e28aa6f15c080c38f86cc9271c7e7f1fe5ccfdb66e"
+}

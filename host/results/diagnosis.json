@@ -1,0 +1,18 @@
+{
+  "free": {
+    "count": 3883,
+    "position_rmse": 0.001123667311122844,
+    "velocity_rmse": 0.0015454279732238759
+  },
+  "contact": {
+    "count": 117,
+    "position_rmse": 0.012314187150978833,
+    "velocity_rmse": 0.021583849200346932
+  },
+  "all": {
+    "count": 4000,
+    "position_rmse": 0.002379315679404688,
+    "velocity_rmse": 0.0039931150661980065
+  },
+  "interpretation": "Conditional prediction errors measured on the original independent validation trajectories. Contact is identified from geometry, never from prediction error. This does not by itself establish contact error as the cause of every control failure."
+}

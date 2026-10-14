@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-host-page><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Puck Lab | Results</title><link rel="stylesheet" href="style.css"><script src="mode.js"></script><link rel="icon" href="data:,"></head>
+<body><header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="pl-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#pl-g)"/><path d="M7 23C10 10 19 9 23 17" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2" stroke-dasharray="2.4 3.2" stroke-linecap="round"/><circle cx="23" cy="19.5" r="4.3" fill="#fff"/></svg><span>Puck Lab</span></a><nav class="tabs" aria-label="Sections"><a href="index.html">Lab</a><a href="results.html" data-host-only aria-current="page">Results</a><a href="how-it-works.html">How it works</a><a href="team-kit.html">Team kit</a></nav><a class="host-chip" data-host-only href="index.html?host=0" title="Switch back to the student view">Host view · exit</a></header>
+<main class="page">
+<p class="eyebrow">Results</p><h1>What changed across unseen scenes?</h1>
+<p class="intro">Five neural models were tested on the same set of 96 scenes, with the planner unchanged. The first three were frozen before this test. The two new-approach rows were trained once and scored once, with no tuning on these scenes. This set has been scored and shown before, so treat it as a public benchmark, not a fresh holdout.</p>
+<div id="error" class="error" role="alert" hidden></div>
+<section class="card"><div class="table-scroll"><table><thead><tr><th>Controller</th><th>Targets reached</th><th></th><th>Mean miss</th><th>New failures vs original</th></tr></thead><tbody id="benchmark-results"><tr><td colspan="5">Loading the fixed comparison…</td></tr></tbody></table></div>
+<p class="hint">96 scenes, 2,048 identical candidate pushes per scene, 35 steps. A target counts as reached when the puck finishes inside the 6.5% ring. Mean miss is the average distance from the target centre, as a share of table width.</p></section>
+
+
+<section class="card"><h2>Two routes to the same score</h2>
+<div class="cols">
+<div><h3>Known geometry</h3><p><strong>Given:</strong> where the walls and the bumper are, written into the model.</p><p><strong>Learned:</strong> how the puck glides, bounces off a wall and bounces off the bumper, with separate pieces and collisions in surface coordinates.</p><p><strong>Score:</strong> 96 of 96 on the 96 scenes.</p></div>
+<div><h3>New approach: inferred geometry</h3><p><strong>Given:</strong> nothing about the table's numbers.</p><p><strong>Found from the training data:</strong> the drag, the wall positions and the bumper's centre and radius. The same kind of model is then built on those found numbers.</p><p><strong>Score:</strong> 96 of 96 with the larger dataset, 94 of 96 with only the original 30,000 transitions.</p></div>
+</div>
+<p class="hint">What both still assume is the <em>form</em> of the table: straight reflecting walls and one round bumper. The new approach removes the hand-written numbers, not that assumption. The new approach is scored by script and is also selectable in the Lab in host view.</p></section>
+
+<section class="card"><h2>What the new approach found</h2>
+<div class="table-scroll"><table><thead><tr><th>Quantity</th><th>Found from the data</th><th>True value</th></tr></thead><tbody id="geometry-rows"><tr><td colspan="3">Loading…</td></tr></tbody></table></div>
+<p class="hint">Found from the original 30,000 transitions only: steps the gliding law cannot explain are collisions, wall hits give the wall positions, and the post-bumper positions lie on a circle that is then fitted.</p></section>
+
+<section class="card"><h2>How to read this</h2>
+<ul class="plain"><li><strong>Same planner, different models.</strong> The only thing that changed between rows is the network that predicts the next state. So the gains come from better predictions, not from a smarter search.</li>
+<li><strong>The newest model reaches all 96 targets.</strong> It uses the same training observations as the previous improved model but stores collision responses relative to the surface, so a collision at any angle shares one learned response.</li>
+<li><strong>“New failures vs original” is 0.</strong> Nothing the original network hit was lost by the later models.</li></ul></section>
+
+<section class="card caution"><h2>What this does not show</h2>
+<ul class="plain"><li>One trained model per row, one training seed. It says nothing about how much results vary between training runs.</li>
+<li>One deterministic simulator with fixed geometry, friction and one bumper. It does not cover noise, other geometry or a real robot.</li>
+<li>Several things changed together in the newest model (coordinates, layer structure, seed, optimiser settings), so this table cannot say which one mattered most.</li>
+<li>Known geometry is a supplied prior. It routes states and transforms coordinates; the collision responses themselves are learned.</li></ul></section>
+
+<p class="more-links">Try it yourself in the <a href="index.html">Lab</a>, or read <a href="how-it-works.html">how the model works</a>.</p>
+</main><footer><span>Learned dynamics / deterministic simulator / no scripted answers</span><span>Local CPU inference · one shared screen</span></footer><script type="module" src="info.mjs"></script></body></html>

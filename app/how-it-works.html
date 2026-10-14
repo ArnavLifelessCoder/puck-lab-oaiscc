@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Puck Lab | How it works</title><link rel="stylesheet" href="style.css"><script src="mode.js"></script><link rel="icon" href="data:,"></head>
+<body><header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="pl-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#pl-g)"/><path d="M7 23C10 10 19 9 23 17" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2" stroke-dasharray="2.4 3.2" stroke-linecap="round"/><circle cx="23" cy="19.5" r="4.3" fill="#fff"/></svg><span>Puck Lab</span></a><nav class="tabs" aria-label="Sections"><a href="index.html">Lab</a><a href="results.html" data-host-only>Results</a><a href="how-it-works.html" aria-current="page">How it works</a><a href="team-kit.html">Team kit</a></nav><a class="host-chip" data-host-only href="index.html?host=0" title="Switch back to the student view">Host view · exit</a></header>
+<main class="page">
+<p class="eyebrow">How it works</p><h1>A network that predicts, a planner that chooses.</h1>
+<p class="intro">The puck moves on a small table with walls and one bumper. A neural network learns how the puck moves from one step to the next. A planner uses that network to pick a push. Then the real simulator runs that push, and you compare.</p>
+<div id="error" class="error" role="alert" hidden></div>
+
+<section class="card"><h2>The challenge</h2><p>A planner gets one push to land a puck in a green ring after 35 steps. It picks the push by asking a small neural network to predict how the puck moves. The predicted path ends at or very near the target, but when the real simulator runs the same push, the puck often misses. Work out where the prediction goes wrong, change how the network is trained, and show with evidence whether the change helped.</p></section>
+
+<section class="card"><h2>One shot, step by step</h2>
+<ol class="flow">
+<li><strong>State</strong><span>Position and velocity: x, y, vx, vy</span></li>
+<li><strong>Neural network</strong><span>Predicts the change to the next state</span></li>
+<li><strong>Repeat 35 times</strong><span>Each prediction feeds the next one, giving a predicted path</span></li>
+<li><strong>Planner</strong><span>Tries many candidate pushes and keeps the one whose predicted path ends closest to the target</span></li>
+<li><strong>Simulator</strong><span>Runs only the chosen push with the real physics</span></li>
+</ol>
+<p class="hint">The planner never asks the simulator which push is best. It trusts the network. That is why a network that is wrong in a small way can still produce a confident plan that misses.</p></section>
+
+<section class="card"><h2>What the network is</h2>
+<p>A small multilayer perceptron with a 4 → 48 → 48 → 4 shape. Its input is the current state. Its output is the change in position and velocity for one step. Its training data comes from ordinary simulated puck trajectories, and the answers it learns from are the simulator's own next states.</p>
+<p id="training-details" class="hint">Loading training details…</p></section>
+
+<section class="card" data-host-only><h2>Route 1: the known-geometry model</h2>
+<p>The improved network expresses bumper collisions in normal and tangent coordinates, so a collision at any angle shares one learned response. Free motion and walls use learned affine layers. The bumper uses a small residual 3 → 32 → 32 → 4 network. Known geometry decides which branch runs and supplies the coordinate transforms.</p>
+<p>Every response is learned from observations. No reflection formula, restitution coefficient or collision projection overrides the network's output, and neither neural planner queries the simulator to rank actions. The optional calibrated physics reference is a separate, non-neural comparison and is not the workshop solution.</p></section>
+
+<section class="card" data-host-only><h2>Route 2: the new approach, geometry inferred from the data</h2>
+<ol class="flow">
+<li><strong>Learn the gliding law</strong><span>From the training data: the puck moves by its velocity and slows by a drag factor (about 0.985 per step).</span></li>
+<li><strong>Find the collisions</strong><span>Any step the gliding law cannot explain is a collision. About 3% of the original steps.</span></li>
+<li><strong>Work out the table</strong><span>Wall hits give the wall positions. Positions just after bumper hits lie on a circle; fit it to get the bumper's centre and radius.</span></li>
+<li><strong>Send each step to the right piece</strong><span>Gliding, wall or bumper, using the found numbers, not hand-written ones.</span></li>
+<li><strong>Learn each piece from data, then score once</strong><span>Straight-line fits for gliding and walls, a small network for the bumper in surface coordinates.</span></li>
+</ol>
+<p>Result on the 96 scenes: <strong>96 of 96</strong> with the larger dataset and <strong>94 of 96</strong> with only the original data. A plain network with no geometry help scored 2 to 6 of 96 on the same data.</p>
+<p class="hint">Still assumed: straight reflecting walls, one round bumper, a drag law, and noiseless data. Several things differ from the original network at once, so this does not show which one mattered most.</p></section>
+
+<section class="card" data-host-only><h2>Run and score both</h2>
+<p>From the full <code>puck-lab</code> folder. Each scoring command takes about 20 seconds and prints the hits out of 96.</p>
+<p><strong>Known-geometry model:</strong></p>
+<pre>python host/score_submission.py host/local_neural_repair.py</pre>
+<p><strong>New approach (larger dataset), about 35 seconds to train:</strong></p>
+<pre>python host/geometry_from_data_pipeline.py scratch/geofree expanded
+python host/score_submission.py scratch/geofree/repair_local_inferred.py</pre>
+<p><strong>New approach, strict (original 30,000 transitions only):</strong></p>
+<pre>python host/geometry_from_data_pipeline.py scratch/geofree-orig original
+python host/score_submission.py scratch/geofree-orig/repair_local_inferred.py</pre>
+<p class="hint">Score once, do not tune afterwards, and call the 96-scene set a public benchmark: it has been scored and shown before.</p></section>
+
+<section class="card"><h2>Why a plan can miss</h2>
+<div class="cols">
+<div><h3>Rare events</h3><p>Collisions are a small share of the training data, so the network sees few examples of them.</p></div>
+<div><h3>Errors add up</h3><p>Each step starts from the last prediction, so a tiny error can grow over 35 steps.</p></div>
+<div><h3>Optimistic picks</h3><p>Searching many pushes favours the ones the network is most wrong about in its own favour.</p></div>
+</div>
+<p class="hint">One missed shot does not show which cause matters most. Testing it is the workshop. More candidate pushes can make the predicted miss look better without making the real result better.</p></section>
+
+<section class="card caution"><h2>Read the results carefully</h2>
+<p>The opening scene in the Lab is an illustrative layout explored during development, not an unbiased benchmark. Predictions and motion are computed live in your browser. Judge a change across many scenes, not one shot.</p></section>
+
+<p class="more-links">Ready to try it? <a href="index.html">Open the Lab</a> or <a href="team-kit.html">get the team kit</a>.</p>
+</main><footer><span>Learned dynamics / deterministic simulator / no scripted answers</span><span>Local CPU inference · one shared screen</span></footer><script type="module" src="info.mjs"></script></body></html>

@@ -1,0 +1,75 @@
+{
+  "name": "New approach: geometry inferred from the data",
+  "model_sha256": "abf8b3c65b0fcca1834fb136885c2aba4f5000e5ea5461644fa020b7141a9089",
+  "inferred_geometry": {
+    "drag": 0.985,
+    "wall_lo": 0.02,
+    "wall_hi": 0.98,
+    "cx": 0.5,
+    "cy": 0.5,
+    "radius": 0.115
+  },
+  "true_geometry": {
+    "drag": 0.985,
+    "wall_lo": 0.02,
+    "wall_hi": 0.98,
+    "cx": 0.5,
+    "cy": 0.5,
+    "radius": 0.115
+  },
+  "results": {
+    "expanded": {
+      "held_out": {
+        "hits": 96,
+        "total": 96,
+        "mean_miss": 0.0135
+      },
+      "development": {
+        "hits": 24,
+        "total": 24,
+        "mean_miss": 0.0122
+      },
+      "geometry": {
+        "drag": 0.985,
+        "wall_lo": 0.02,
+        "wall_hi": 0.98,
+        "cx": 0.4999999999999998,
+        "cy": 0.4999999999999999,
+        "radius": 0.11499999999999874
+      }
+    },
+    "original": {
+      "held_out": {
+        "hits": 94,
+        "total": 96,
+        "mean_miss": 0.0141
+      },
+      "development": {
+        "hits": 24,
+        "total": 24,
+        "mean_miss": 0.011
+      },
+      "geometry": {
+        "drag": 0.985,
+        "wall_lo": 0.02,
+        "wall_hi": 0.98,
+        "cx": 0.4999999999999998,
+        "cy": 0.4999999999999999,
+        "radius": 0.11499999999999874
+      }
+    }
+  },
+  "known_geometry_reference": {
+    "held_out": {
+      "hits": 96,
+      "total": 96,
+      "mean_miss": 0.0108
+    },
+    "development": {
+      "hits": 24,
+      "total": 24
+    }
+  },
+  "measured": "6 Oct 2026, one seed (373), 1,000 epochs, 3-32-32-4 bumper network. Not tuned on the 96 scenes.",
+  "assumes": "The form of the table (position moves by velocity, a drag law, reflecting straight walls, one round bumper). The numbers are inferred from the original 30,000 transitions."
+}

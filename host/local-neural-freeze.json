@@ -1,0 +1,6 @@
+{
+  "sha256": "5de0225d24b48f4f7595ce697a4f672e45dc627100e7c72bd58019a06411ec08",
+  "previous_sha256": "fcd63c56e8e6837890960d0fd3d904ec1892d72764e2a5f0812a43903df006c4",
+  "original_sha256": "add59d9866d64cc70fa3e9f483dddfb9ee3f6c1333391915c293b4d28c9b2140",
+  "selection": "Fixed 1000 epochs; selected after 24/24 development successes, no fresh confirmation outcomes inspected."
+}

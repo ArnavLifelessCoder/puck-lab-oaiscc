@@ -1,0 +1,5 @@
+{
+  "sha256": "fcd63c56e8e6837890960d0fd3d904ec1892d72764e2a5f0812a43903df006c4",
+  "selection": "gated-residual-mlp-v2 selected on 24 development scenes, 16 successes; confirmation not yet evaluated",
+  "protocol": "neural-protocol.json"
+}

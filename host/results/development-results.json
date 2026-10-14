@@ -1,0 +1,1239 @@
+{
+  "partition": "development",
+  "protocol": {
+    "version": 2,
+    "training_seed": 71,
+    "calibration_data": "Exactly the original 1200 training trajectories, no extra observations",
+    "development_seed": 8301,
+    "development_scenes": 24,
+    "confirmation_seed": 9403,
+    "confirmation_scenes": 96,
+    "horizon": 35,
+    "budget": 2048,
+    "candidate_seed": 123,
+    "max_speed": 0.11,
+    "target_radius": 0.065,
+    "selection": "Uniform valid starts and targets in [0.08,0.92]^2 outside bumper+target radius; separation >=0.30. No selection by success or model error.",
+    "controllers": [
+      "neural",
+      "contact-repair",
+      "calibrated",
+      "oracle"
+    ],
+    "knowledge": "Contact-repair and calibrated controllers know position integration, table geometry and contact structure. Drag and restitution are fitted from training observations. Oracle directly uses simulator dynamics and is a privileged feasibility baseline, not an ML repair.",
+    "decision": "Freeze fitting and controller definitions before running confirmation. Report success counts, per-scene regressions, Wilson intervals and timing; do not select seeds or retune after confirmation."
+  },
+  "scenes": [
+    {
+      "start": [
+        0.2310392067050594,
+        0.9060436803111024
+      ],
+      "target": [
+        0.7784899710268801,
+        0.7586432661220088
+      ]
+    },
+    {
+      "start": [
+        0.5283778350799199,
+        0.3196820990025564
+      ],
+      "target": [
+        0.1909230620385216,
+        0.7212195325688191
+      ]
+    },
+    {
+      "start": [
+        0.6430787740917523,
+        0.8576215465971676
+      ],
+      "target": [
+        0.14616066832810287,
+        0.6702086780324643
+      ]
+    },
+    {
+      "start": [
+        0.6411524908873478,
+        0.13276568991806773
+      ],
+      "target": [
+        0.1345895249048599,
+        0.5677169556511217
+      ]
+    },
+    {
+      "start": [
+        0.8814525967885366,
+        0.7136406321668498
+      ],
+      "target": [
+        0.5777601343367681,
+        0.12591988172651225
+      ]
+    },
+    {
+      "start": [
+        0.6980576762834472,
+        0.535320635616948
+      ],
+      "target": [
+        0.36587654914549056,
+        0.25122102386390494
+      ]
+    },
+    {
+      "start": [
+        0.4270767067556435,
+        0.13430024833743748
+      ],
+      "target": [
+        0.2992122808834449,
+        0.6036799358679371
+      ]
+    },
+    {
+      "start": [
+        0.14950401695197685,
+        0.6818399799640166
+      ],
+      "target": [
+        0.8168261611281284,
+        0.49259122081148154
+      ]
+    },
+    {
+      "start": [
+        0.3341553444220936,
+        0.5869148183432091
+      ],
+      "target": [
+        0.7612232288172274,
+        0.09748546361544196
+      ]
+    },
+    {
+      "start": [
+        0.38634719180654953,
+        0.24094760401681248
+      ],
+      "target": [
+        0.6901618414451973,
+        0.6755716048308941
+      ]
+    },
+    {
+      "start": [
+        0.2518465104447058,
+        0.851151449812624
+      ],
+      "target": [
+        0.5017078543633527,
+        0.18621259794364792
+      ]
+    },
+    {
+      "start": [
+        0.36951144172478156,
+        0.09570782994042948
+      ],
+      "target": [
+        0.8366274077904118,
+        0.310869084042929
+      ]
+    },
+    {
+      "start": [
+        0.4312190045389124,
+        0.08232586050295292
+      ],
+      "target": [
+        0.481283852550645,
+        0.7775191459291545
+      ]
+    },
+    {
+      "start": [
+        0.3870069209130238,
+        0.16771222980743206
+      ],
+      "target": [
+        0.6966958952162831,
+        0.6289369740528509
+      ]
+    },
+    {
+      "start": [
+        0.8996075074610587,
+        0.2978531580460986
+      ],
+      "target": [
+        0.5198059990062501,
+        0.24774659627778012
+      ]
+    },
+    {
+      "start": [
+        0.2693778021876862,
+        0.40371500585649583
+      ],
+      "target": [
+        0.9176385452970532,
+        0.5768180250161228
+      ]
+    },
+    {
+      "start": [
+        0.2795367043920703,
+        0.3943115706110764
+      ],
+      "target": [
+        0.6621965616463242,
+        0.8192390147369097
+      ]
+    },
+    {
+      "start": [
+        0.1316473535656454,
+        0.3036902852717448
+      ],
+      "target": [
+        0.11390239619261171,
+        0.8029463775005184
+      ]
+    },
+    {
+      "start": [
+        0.8403661298931551,
+        0.457611714081524
+      ],
+      "target": [
+        0.11202422371382356,
+        0.5028094310455453
+      ]
+    },
+    {
+      "start": [
+        0.7409039702106096,
+        0.22902864571198422
+      ],
+      "target": [
+        0.48659161764742265,
+        0.8790661463952386
+      ]
+    },
+    {
+      "start": [
+        0.10497008597888823,
+        0.4568469740227764
+      ],
+      "target": [
+        0.8879750264215097,
+        0.5235329783911258
+      ]
+    },
+    {
+      "start": [
+        0.8898253865654393,
+        0.445964533691901
+      ],
+      "target": [
+        0.4634299672555588,
+        0.7424917705650369
+      ]
+    },
+    {
+      "start": [
+        0.881924753486318,
+        0.1141518203352974
+      ],
+      "target": [
+        0.8520391859575787,
+        0.6445027297354641
+      ]
+    },
+    {
+      "start": [
+        0.08448643840117509,
+        0.2748457000336865
+      ],
+      "target": [
+        0.41121876221855436,
+        0.734952559108448
+      ]
+    }
+  ],
+  "summary": {
+    "neural": {
+      "hits": 0,
+      "total": 24,
+      "success": 0.0,
+      "wilson95": [
+        0,
+        0.13798057582897535
+      ],
+      "mean_miss": 0.5126440818184806,
+      "median_planning_seconds": 0.21648305002599955,
+      "corrected": [],
+      "regressed": []
+    },
+    "contact-repair": {
+      "hits": 0,
+      "total": 24,
+      "success": 0.0,
+      "wilson95": [
+        0,
+        0.13798057582897535
+      ],
+      "mean_miss": 0.4608593401586818,
+      "median_planning_seconds": 0.24495689998730086,
+      "corrected": [],
+      "regressed": []
+    },
+    "calibrated": {
+      "hits": 24,
+      "total": 24,
+      "success": 1.0,
+      "wilson95": [
+        0.8620194241710247,
+        1
+      ],
+      "mean_miss": 0.010150196794166483,
+      "median_planning_seconds": 0.025854050007183105,
+      "corrected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "regressed": []
+    },
+    "oracle": {
+      "hits": 24,
+      "total": 24,
+      "success": 1.0,
+      "wilson95": [
+        0.8620194241710247,
+        1
+      ],
+      "mean_miss": 0.010150196794166483,
+      "median_planning_seconds": null,
+      "corrected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "regressed": []
+    }
+  },
+  "rows": [
+    {
+      "scene": 0,
+      "controller": "neural",
+      "selected": 228,
+      "predicted_miss": 0.07243482646713666,
+      "actual_miss": 0.2182217950757282,
+      "hit": false,
+      "seconds": 0.22152870002901182
+    },
+    {
+      "scene": 0,
+      "controller": "contact-repair",
+      "selected": 2003,
+      "predicted_miss": 0.021714682571739998,
+      "actual_miss": 0.24256965666361321,
+      "hit": false,
+      "seconds": 0.31199459999334067
+    },
+    {
+      "scene": 0,
+      "controller": "calibrated",
+      "selected": 1406,
+      "predicted_miss": 0.005031306517679153,
+      "actual_miss": 0.005031306517680113,
+      "hit": true,
+      "seconds": 0.01847840001573786
+    },
+    {
+      "scene": 0,
+      "controller": "oracle",
+      "selected": 1406,
+      "predicted_miss": 0.005031306517680113,
+      "actual_miss": 0.005031306517680113,
+      "hit": true,
+      "seconds": 0.007438300002831966
+    },
+    {
+      "scene": 1,
+      "controller": "neural",
+      "selected": 1879,
+      "predicted_miss": 0.11246465622440385,
+      "actual_miss": 0.3004689897463665,
+      "hit": false,
+      "seconds": 0.2606379000353627
+    },
+    {
+      "scene": 1,
+      "controller": "contact-repair",
+      "selected": 1006,
+      "predicted_miss": 0.027687115020019023,
+      "actual_miss": 0.7898640678562455,
+      "hit": false,
+      "seconds": 0.3111239999998361
+    },
+    {
+      "scene": 1,
+      "controller": "calibrated",
+      "selected": 402,
+      "predicted_miss": 0.0031918370060529545,
+      "actual_miss": 0.0031918370060531787,
+      "hit": true,
+      "seconds": 0.025162399979308248
+    },
+    {
+      "scene": 1,
+      "controller": "oracle",
+      "selected": 402,
+      "predicted_miss": 0.0031918370060531787,
+      "actual_miss": 0.0031918370060531787,
+      "hit": true,
+      "seconds": 0.011420900002121925
+    },
+    {
+      "scene": 2,
+      "controller": "neural",
+      "selected": 1584,
+      "predicted_miss": 0.024621827250968047,
+      "actual_miss": 0.19435678898986047,
+      "hit": false,
+      "seconds": 0.22622620000038296
+    },
+    {
+      "scene": 2,
+      "controller": "contact-repair",
+      "selected": 254,
+      "predicted_miss": 0.004101387471406951,
+      "actual_miss": 0.7783702652842998,
+      "hit": false,
+      "seconds": 0.2696577999740839
+    },
+    {
+      "scene": 2,
+      "controller": "calibrated",
+      "selected": 1957,
+      "predicted_miss": 0.01293031769476572,
+      "actual_miss": 0.01293031769476252,
+      "hit": true,
+      "seconds": 0.02740969997830689
+    },
+    {
+      "scene": 2,
+      "controller": "oracle",
+      "selected": 1957,
+      "predicted_miss": 0.01293031769476252,
+      "actual_miss": 0.01293031769476252,
+      "hit": true,
+      "seconds": 0.007252300041727722
+    },
+    {
+      "scene": 3,
+      "controller": "neural",
+      "selected": 254,
+      "predicted_miss": 0.0672793689492185,
+      "actual_miss": 0.8298834057744309,
+      "hit": false,
+      "seconds": 0.29806529998313636
+    },
+    {
+      "scene": 3,
+      "controller": "contact-repair",
+      "selected": 924,
+      "predicted_miss": 0.018242127283733155,
+      "actual_miss": 0.37237169405215037,
+      "hit": false,
+      "seconds": 0.22440499998629093
+    },
+    {
+      "scene": 3,
+      "controller": "calibrated",
+      "selected": 1574,
+      "predicted_miss": 0.0122644808850662,
+      "actual_miss": 0.01226448088506701,
+      "hit": true,
+      "seconds": 0.03192969999508932
+    },
+    {
+      "scene": 3,
+      "controller": "oracle",
+      "selected": 1574,
+      "predicted_miss": 0.01226448088506701,
+      "actual_miss": 0.01226448088506701,
+      "hit": true,
+      "seconds": 0.008373799966648221
+    },
+    {
+      "scene": 4,
+      "controller": "neural",
+      "selected": 976,
+      "predicted_miss": 0.03745365100499761,
+      "actual_miss": 0.7155237926519726,
+      "hit": false,
+      "seconds": 0.2711064000031911
+    },
+    {
+      "scene": 4,
+      "controller": "contact-repair",
+      "selected": 221,
+      "predicted_miss": 0.009839796784943268,
+      "actual_miss": 0.3897701158895552,
+      "hit": false,
+      "seconds": 0.2984067000215873
+    },
+    {
+      "scene": 4,
+      "controller": "calibrated",
+      "selected": 645,
+      "predicted_miss": 0.017326261078855383,
+      "actual_miss": 0.017326261078857323,
+      "hit": true,
+      "seconds": 0.026822099986020476
+    },
+    {
+      "scene": 4,
+      "controller": "oracle",
+      "selected": 645,
+      "predicted_miss": 0.017326261078857323,
+      "actual_miss": 0.017326261078857323,
+      "hit": true,
+      "seconds": 0.006711099995300174
+    },
+    {
+      "scene": 5,
+      "controller": "neural",
+      "selected": 1321,
+      "predicted_miss": 0.16953207366297077,
+      "actual_miss": 0.5018713865695725,
+      "hit": false,
+      "seconds": 0.26030640001408756
+    },
+    {
+      "scene": 5,
+      "controller": "contact-repair",
+      "selected": 1426,
+      "predicted_miss": 0.024930853368388836,
+      "actual_miss": 0.4849702863986538,
+      "hit": false,
+      "seconds": 0.2892561000189744
+    },
+    {
+      "scene": 5,
+      "controller": "calibrated",
+      "selected": 1125,
+      "predicted_miss": 0.015347405935576978,
+      "actual_miss": 0.015347405935576632,
+      "hit": true,
+      "seconds": 0.026899699994828552
+    },
+    {
+      "scene": 5,
+      "controller": "oracle",
+      "selected": 1125,
+      "predicted_miss": 0.015347405935576632,
+      "actual_miss": 0.015347405935576632,
+      "hit": true,
+      "seconds": 0.006302400026470423
+    },
+    {
+      "scene": 6,
+      "controller": "neural",
+      "selected": 553,
+      "predicted_miss": 0.18455490918549855,
+      "actual_miss": 0.317895690724912,
+      "hit": false,
+      "seconds": 0.19771290000062436
+    },
+    {
+      "scene": 6,
+      "controller": "contact-repair",
+      "selected": 1009,
+      "predicted_miss": 0.011662636563224686,
+      "actual_miss": 0.6076193682536879,
+      "hit": false,
+      "seconds": 0.24222030001692474
+    },
+    {
+      "scene": 6,
+      "controller": "calibrated",
+      "selected": 43,
+      "predicted_miss": 0.005040163966218531,
+      "actual_miss": 0.005040163966218946,
+      "hit": true,
+      "seconds": 0.026276800024788827
+    },
+    {
+      "scene": 6,
+      "controller": "oracle",
+      "selected": 43,
+      "predicted_miss": 0.005040163966218946,
+      "actual_miss": 0.005040163966218946,
+      "hit": true,
+      "seconds": 0.006661200022790581
+    },
+    {
+      "scene": 7,
+      "controller": "neural",
+      "selected": 1727,
+      "predicted_miss": 0.07010709230855437,
+      "actual_miss": 0.512131036714992,
+      "hit": false,
+      "seconds": 0.22224849998019636
+    },
+    {
+      "scene": 7,
+      "controller": "contact-repair",
+      "selected": 1130,
+      "predicted_miss": 0.029743944152076204,
+      "actual_miss": 0.8141426415607742,
+      "hit": false,
+      "seconds": 0.24100520001957193
+    },
+    {
+      "scene": 7,
+      "controller": "calibrated",
+      "selected": 645,
+      "predicted_miss": 0.01719872990707266,
+      "actual_miss": 0.017198729907070207,
+      "hit": true,
+      "seconds": 0.02802480000536889
+    },
+    {
+      "scene": 7,
+      "controller": "oracle",
+      "selected": 645,
+      "predicted_miss": 0.017198729907070207,
+      "actual_miss": 0.017198729907070207,
+      "hit": true,
+      "seconds": 0.006840399990323931
+    },
+    {
+      "scene": 8,
+      "controller": "neural",
+      "selected": 1643,
+      "predicted_miss": 0.016750552324051617,
+      "actual_miss": 0.5065704659906677,
+      "hit": false,
+      "seconds": 0.20915950002381578
+    },
+    {
+      "scene": 8,
+      "controller": "contact-repair",
+      "selected": 1491,
+      "predicted_miss": 0.0030355062433811723,
+      "actual_miss": 0.20621470553681176,
+      "hit": false,
+      "seconds": 0.2445768999750726
+    },
+    {
+      "scene": 8,
+      "controller": "calibrated",
+      "selected": 183,
+      "predicted_miss": 0.0145642584683726,
+      "actual_miss": 0.014564258468370003,
+      "hit": true,
+      "seconds": 0.02551760000642389
+    },
+    {
+      "scene": 8,
+      "controller": "oracle",
+      "selected": 183,
+      "predicted_miss": 0.014564258468370003,
+      "actual_miss": 0.014564258468370003,
+      "hit": true,
+      "seconds": 0.006537500012200326
+    },
+    {
+      "scene": 9,
+      "controller": "neural",
+      "selected": 1339,
+      "predicted_miss": 0.1929954939967822,
+      "actual_miss": 0.6317181848119338,
+      "hit": false,
+      "seconds": 0.20934419997502118
+    },
+    {
+      "scene": 9,
+      "controller": "contact-repair",
+      "selected": 1178,
+      "predicted_miss": 0.025165685441490563,
+      "actual_miss": 0.2368307116201853,
+      "hit": false,
+      "seconds": 0.21858479996444657
+    },
+    {
+      "scene": 9,
+      "controller": "calibrated",
+      "selected": 253,
+      "predicted_miss": 0.009799400005824396,
+      "actual_miss": 0.00979940000582594,
+      "hit": true,
+      "seconds": 0.021135499991942197
+    },
+    {
+      "scene": 9,
+      "controller": "oracle",
+      "selected": 253,
+      "predicted_miss": 0.00979940000582594,
+      "actual_miss": 0.00979940000582594,
+      "hit": true,
+      "seconds": 0.0049971999833360314
+    },
+    {
+      "scene": 10,
+      "controller": "neural",
+      "selected": 534,
+      "predicted_miss": 0.0846353752939394,
+      "actual_miss": 0.6375457854584011,
+      "hit": false,
+      "seconds": 0.22863099997630343
+    },
+    {
+      "scene": 10,
+      "controller": "contact-repair",
+      "selected": 13,
+      "predicted_miss": 0.01659691440450669,
+      "actual_miss": 0.6303107121747041,
+      "hit": false,
+      "seconds": 0.17746039998019114
+    },
+    {
+      "scene": 10,
+      "controller": "calibrated",
+      "selected": 1448,
+      "predicted_miss": 0.00912108228323916,
+      "actual_miss": 0.00912108228324107,
+      "hit": true,
+      "seconds": 0.01686809997772798
+    },
+    {
+      "scene": 10,
+      "controller": "oracle",
+      "selected": 1448,
+      "predicted_miss": 0.00912108228324107,
+      "actual_miss": 0.00912108228324107,
+      "hit": true,
+      "seconds": 0.004623800050467253
+    },
+    {
+      "scene": 11,
+      "controller": "neural",
+      "selected": 1070,
+      "predicted_miss": 0.030803541888689525,
+      "actual_miss": 0.47983514828111723,
+      "hit": false,
+      "seconds": 0.17000560002634302
+    },
+    {
+      "scene": 11,
+      "controller": "contact-repair",
+      "selected": 412,
+      "predicted_miss": 0.006252597186943429,
+      "actual_miss": 0.22242195383959454,
+      "hit": false,
+      "seconds": 0.23652199999196455
+    },
+    {
+      "scene": 11,
+      "controller": "calibrated",
+      "selected": 1947,
+      "predicted_miss": 0.013117245557926201,
+      "actual_miss": 0.013117245557927315,
+      "hit": true,
+      "seconds": 0.019126400002278388
+    },
+    {
+      "scene": 11,
+      "controller": "oracle",
+      "selected": 1947,
+      "predicted_miss": 0.013117245557927315,
+      "actual_miss": 0.013117245557927315,
+      "hit": true,
+      "seconds": 0.006757900002412498
+    },
+    {
+      "scene": 12,
+      "controller": "neural",
+      "selected": 794,
+      "predicted_miss": 0.1910760421428537,
+      "actual_miss": 0.7573620242613172,
+      "hit": false,
+      "seconds": 0.1810964000178501
+    },
+    {
+      "scene": 12,
+      "controller": "contact-repair",
+      "selected": 101,
+      "predicted_miss": 0.023318306015967866,
+      "actual_miss": 0.48953103456364333,
+      "hit": false,
+      "seconds": 0.16843830002471805
+    },
+    {
+      "scene": 12,
+      "controller": "calibrated",
+      "selected": 1864,
+      "predicted_miss": 0.00878471080307219,
+      "actual_miss": 0.008784710803077914,
+      "hit": true,
+      "seconds": 0.01673940004548058
+    },
+    {
+      "scene": 12,
+      "controller": "oracle",
+      "selected": 1864,
+      "predicted_miss": 0.008784710803077914,
+      "actual_miss": 0.008784710803077914,
+      "hit": true,
+      "seconds": 0.004072000039741397
+    },
+    {
+      "scene": 13,
+      "controller": "neural",
+      "selected": 419,
+      "predicted_miss": 0.17490491901124305,
+      "actual_miss": 0.7811769038373614,
+      "hit": false,
+      "seconds": 0.16327620000811294
+    },
+    {
+      "scene": 13,
+      "controller": "contact-repair",
+      "selected": 212,
+      "predicted_miss": 0.010095143152290795,
+      "actual_miss": 0.15832364714127195,
+      "hit": false,
+      "seconds": 0.19397690001642331
+    },
+    {
+      "scene": 13,
+      "controller": "calibrated",
+      "selected": 864,
+      "predicted_miss": 0.0024430207957543753,
+      "actual_miss": 0.0024430207957554058,
+      "hit": true,
+      "seconds": 0.019615299999713898
+    },
+    {
+      "scene": 13,
+      "controller": "oracle",
+      "selected": 864,
+      "predicted_miss": 0.0024430207957554058,
+      "actual_miss": 0.0024430207957554058,
+      "hit": true,
+      "seconds": 0.005472999997437
+    },
+    {
+      "scene": 14,
+      "controller": "neural",
+      "selected": 652,
+      "predicted_miss": 0.08581975886101467,
+      "actual_miss": 0.6221802372047089,
+      "hit": false,
+      "seconds": 0.182496799970977
+    },
+    {
+      "scene": 14,
+      "controller": "contact-repair",
+      "selected": 995,
+      "predicted_miss": 0.032982928965676374,
+      "actual_miss": 0.6001476070507412,
+      "hit": false,
+      "seconds": 0.26071220001904294
+    },
+    {
+      "scene": 14,
+      "controller": "calibrated",
+      "selected": 876,
+      "predicted_miss": 0.005090762700796484,
+      "actual_miss": 0.005090762700797601,
+      "hit": true,
+      "seconds": 0.0227601999649778
+    },
+    {
+      "scene": 14,
+      "controller": "oracle",
+      "selected": 876,
+      "predicted_miss": 0.005090762700797601,
+      "actual_miss": 0.005090762700797601,
+      "hit": true,
+      "seconds": 0.004415299976244569
+    },
+    {
+      "scene": 15,
+      "controller": "neural",
+      "selected": 851,
+      "predicted_miss": 0.05117389520686741,
+      "actual_miss": 0.5805987225078716,
+      "hit": false,
+      "seconds": 0.19201940001221374
+    },
+    {
+      "scene": 15,
+      "controller": "contact-repair",
+      "selected": 1075,
+      "predicted_miss": 0.007986377970879519,
+      "actual_miss": 0.6336636658562869,
+      "hit": false,
+      "seconds": 0.2490152000100352
+    },
+    {
+      "scene": 15,
+      "controller": "calibrated",
+      "selected": 1789,
+      "predicted_miss": 0.008630891574135418,
+      "actual_miss": 0.008630891574134957,
+      "hit": true,
+      "seconds": 0.03086749999783933
+    },
+    {
+      "scene": 15,
+      "controller": "oracle",
+      "selected": 1789,
+      "predicted_miss": 0.008630891574134957,
+      "actual_miss": 0.008630891574134957,
+      "hit": true,
+      "seconds": 0.007129899982828647
+    },
+    {
+      "scene": 16,
+      "controller": "neural",
+      "selected": 1458,
+      "predicted_miss": 0.08552070998281923,
+      "actual_miss": 0.08703417464893998,
+      "hit": false,
+      "seconds": 0.22974350000731647
+    },
+    {
+      "scene": 16,
+      "controller": "contact-repair",
+      "selected": 1634,
+      "predicted_miss": 0.02702633921033163,
+      "actual_miss": 0.18281160294366736,
+      "hit": false,
+      "seconds": 0.254714899987448
+    },
+    {
+      "scene": 16,
+      "controller": "calibrated",
+      "selected": 844,
+      "predicted_miss": 0.008127872383305151,
+      "actual_miss": 0.00812787238330204,
+      "hit": true,
+      "seconds": 0.03060239995829761
+    },
+    {
+      "scene": 16,
+      "controller": "oracle",
+      "selected": 844,
+      "predicted_miss": 0.00812787238330204,
+      "actual_miss": 0.00812787238330204,
+      "hit": true,
+      "seconds": 0.007015899987891316
+    },
+    {
+      "scene": 17,
+      "controller": "neural",
+      "selected": 21,
+      "predicted_miss": 0.024765403665338387,
+      "actual_miss": 0.5584731965548158,
+      "hit": false,
+      "seconds": 0.1696282000048086
+    },
+    {
+      "scene": 17,
+      "controller": "contact-repair",
+      "selected": 943,
+      "predicted_miss": 0.008460634339806454,
+      "actual_miss": 0.45254229934001977,
+      "hit": false,
+      "seconds": 0.24978509999345988
+    },
+    {
+      "scene": 17,
+      "controller": "calibrated",
+      "selected": 828,
+      "predicted_miss": 0.019034896868755966,
+      "actual_miss": 0.019034896868749283,
+      "hit": true,
+      "seconds": 0.029007400036789477
+    },
+    {
+      "scene": 17,
+      "controller": "oracle",
+      "selected": 828,
+      "predicted_miss": 0.019034896868749283,
+      "actual_miss": 0.019034896868749283,
+      "hit": true,
+      "seconds": 0.006449999986216426
+    },
+    {
+      "scene": 18,
+      "controller": "neural",
+      "selected": 1693,
+      "predicted_miss": 0.04065599614344262,
+      "actual_miss": 0.8783961621406123,
+      "hit": false,
+      "seconds": 0.2213441000203602
+    },
+    {
+      "scene": 18,
+      "controller": "contact-repair",
+      "selected": 499,
+      "predicted_miss": 0.013570793933580391,
+      "actual_miss": 0.7966140913152698,
+      "hit": false,
+      "seconds": 0.24533689999952912
+    },
+    {
+      "scene": 18,
+      "controller": "calibrated",
+      "selected": 770,
+      "predicted_miss": 0.013348308164808633,
+      "actual_miss": 0.013348308164810477,
+      "hit": true,
+      "seconds": 0.02619050000794232
+    },
+    {
+      "scene": 18,
+      "controller": "oracle",
+      "selected": 770,
+      "predicted_miss": 0.013348308164810477,
+      "actual_miss": 0.013348308164810477,
+      "hit": true,
+      "seconds": 0.007363400014583021
+    },
+    {
+      "scene": 19,
+      "controller": "neural",
+      "selected": 984,
+      "predicted_miss": 0.019114879006706158,
+      "actual_miss": 0.3755407433821373,
+      "hit": false,
+      "seconds": 0.23011080001015216
+    },
+    {
+      "scene": 19,
+      "controller": "contact-repair",
+      "selected": 1649,
+      "predicted_miss": 0.004600724164235512,
+      "actual_miss": 0.5202164202582515,
+      "hit": false,
+      "seconds": 0.21948889998020604
+    },
+    {
+      "scene": 19,
+      "controller": "calibrated",
+      "selected": 860,
+      "predicted_miss": 0.010324382472708279,
+      "actual_miss": 0.010324382472703937,
+      "hit": true,
+      "seconds": 0.016788700013421476
+    },
+    {
+      "scene": 19,
+      "controller": "oracle",
+      "selected": 860,
+      "predicted_miss": 0.010324382472703937,
+      "actual_miss": 0.010324382472703937,
+      "hit": true,
+      "seconds": 0.0057898000231944025
+    },
+    {
+      "scene": 20,
+      "controller": "neural",
+      "selected": 1779,
+      "predicted_miss": 0.04044261461749423,
+      "actual_miss": 0.6072885697980451,
+      "hit": false,
+      "seconds": 0.2197605000110343
+    },
+    {
+      "scene": 20,
+      "controller": "contact-repair",
+      "selected": 882,
+      "predicted_miss": 0.00862741359103244,
+      "actual_miss": 0.6729530153574953,
+      "hit": false,
+      "seconds": 0.2667755000293255
+    },
+    {
+      "scene": 20,
+      "controller": "calibrated",
+      "selected": 312,
+      "predicted_miss": 0.005607725963255725,
+      "actual_miss": 0.005607725963257456,
+      "hit": true,
+      "seconds": 0.02846429997589439
+    },
+    {
+      "scene": 20,
+      "controller": "oracle",
+      "selected": 312,
+      "predicted_miss": 0.005607725963257456,
+      "actual_miss": 0.005607725963257456,
+      "hit": true,
+      "seconds": 0.0063705999637022614
+    },
+    {
+      "scene": 21,
+      "controller": "neural",
+      "selected": 1655,
+      "predicted_miss": 0.13147863889187714,
+      "actual_miss": 0.45019885165482576,
+      "hit": false,
+      "seconds": 0.21320560004096478
+    },
+    {
+      "scene": 21,
+      "controller": "contact-repair",
+      "selected": 427,
+      "predicted_miss": 0.03954128045721742,
+      "actual_miss": 0.3569440655708985,
+      "hit": false,
+      "seconds": 0.2017461999785155
+    },
+    {
+      "scene": 21,
+      "controller": "calibrated",
+      "selected": 199,
+      "predicted_miss": 0.012521315139505738,
+      "actual_miss": 0.012521315139504236,
+      "hit": true,
+      "seconds": 0.015762299997732043
+    },
+    {
+      "scene": 21,
+      "controller": "oracle",
+      "selected": 199,
+      "predicted_miss": 0.012521315139504236,
+      "actual_miss": 0.012521315139504236,
+      "hit": true,
+      "seconds": 0.004072400042787194
+    },
+    {
+      "scene": 22,
+      "controller": "neural",
+      "selected": 908,
+      "predicted_miss": 0.032673979601869005,
+      "actual_miss": 0.3749460029758263,
+      "hit": false,
+      "seconds": 0.20061709999572486
+    },
+    {
+      "scene": 22,
+      "controller": "contact-repair",
+      "selected": 784,
+      "predicted_miss": 0.005209430535110232,
+      "actual_miss": 0.16004014615239937,
+      "hit": false,
+      "seconds": 0.2679168000468053
+    },
+    {
+      "scene": 22,
+      "controller": "calibrated",
+      "selected": 236,
+      "predicted_miss": 0.009118225314572917,
+      "actual_miss": 0.009118225314573446,
+      "hit": true,
+      "seconds": 0.027020399982575327
+    },
+    {
+      "scene": 22,
+      "controller": "oracle",
+      "selected": 236,
+      "predicted_miss": 0.009118225314573446,
+      "actual_miss": 0.009118225314573446,
+      "hit": true,
+      "seconds": 0.007956500048749149
+    },
+    {
+      "scene": 23,
+      "controller": "neural",
+      "selected": 1158,
+      "predicted_miss": 0.07709513320480402,
+      "actual_miss": 0.3842399038871189,
+      "hit": false,
+      "seconds": 0.1932102999999188
+    },
+    {
+      "scene": 23,
+      "controller": "contact-repair",
+      "selected": 1718,
+      "predicted_miss": 0.0024259527765659425,
+      "actual_miss": 0.26138038912814193,
+      "hit": false,
+      "seconds": 0.21058020001510158
+    },
+    {
+      "scene": 23,
+      "controller": "calibrated",
+      "selected": 242,
+      "predicted_miss": 0.0056401215726786524,
+      "actual_miss": 0.005640121572678573,
+      "hit": true,
+      "seconds": 0.017704600002616644
+    },
+    {
+      "scene": 23,
+      "controller": "oracle",
+      "selected": 242,
+      "predicted_miss": 0.005640121572678573,
+      "actual_miss": 0.005640121572678573,
+      "hit": true,
+      "seconds": 0.004544600029475987
+    }
+  ],
+  "limitation": "Synthetic deterministic environment with known geometry. Calibration matches the simulator family by design. One checkpoint and environment; Wilson intervals summarize sampled scenes, not model-seed uncertainty. Oracle uses privileged true dynamics."
+}

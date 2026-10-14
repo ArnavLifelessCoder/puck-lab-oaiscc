@@ -1,0 +1,916 @@
+{
+  "partition": "development",
+  "improved_model_sha256": "d9ac61c0b28fa3d8bda0cf1bc2e4c879699a205ebfb3c0fe86a0d0704123e78f",
+  "protocol": {
+    "comparison": "original neural vs improved neural",
+    "development": "Existing 24 development scenes; may be used to assess or revise the candidate.",
+    "confirmation_seed": 202609291,
+    "confirmation_count": 96,
+    "candidate_seed": 123,
+    "budget": 2048,
+    "horizon": 35,
+    "max_speed": 0.11,
+    "target_radius": 0.065,
+    "freeze_rule": "Choose the neural checkpoint using training/validation/development only; record its hash before the new confirmation partition is evaluated. Previous physics-reference confirmation scenes are not a fresh test for this iteration.",
+    "inference_rule": "Improved dynamics must return network outputs directly. No calibrated coefficients, contact response replacement, simulator queries or truth-based action selection."
+  },
+  "scenes": [
+    {
+      "start": [
+        0.2310392067050594,
+        0.9060436803111024
+      ],
+      "target": [
+        0.7784899710268801,
+        0.7586432661220088
+      ]
+    },
+    {
+      "start": [
+        0.5283778350799199,
+        0.3196820990025564
+      ],
+      "target": [
+        0.1909230620385216,
+        0.7212195325688191
+      ]
+    },
+    {
+      "start": [
+        0.6430787740917523,
+        0.8576215465971676
+      ],
+      "target": [
+        0.14616066832810287,
+        0.6702086780324643
+      ]
+    },
+    {
+      "start": [
+        0.6411524908873478,
+        0.13276568991806773
+      ],
+      "target": [
+        0.1345895249048599,
+        0.5677169556511217
+      ]
+    },
+    {
+      "start": [
+        0.8814525967885366,
+        0.7136406321668498
+      ],
+      "target": [
+        0.5777601343367681,
+        0.12591988172651225
+      ]
+    },
+    {
+      "start": [
+        0.6980576762834472,
+        0.535320635616948
+      ],
+      "target": [
+        0.36587654914549056,
+        0.25122102386390494
+      ]
+    },
+    {
+      "start": [
+        0.4270767067556435,
+        0.13430024833743748
+      ],
+      "target": [
+        0.2992122808834449,
+        0.6036799358679371
+      ]
+    },
+    {
+      "start": [
+        0.14950401695197685,
+        0.6818399799640166
+      ],
+      "target": [
+        0.8168261611281284,
+        0.49259122081148154
+      ]
+    },
+    {
+      "start": [
+        0.3341553444220936,
+        0.5869148183432091
+      ],
+      "target": [
+        0.7612232288172274,
+        0.09748546361544196
+      ]
+    },
+    {
+      "start": [
+        0.38634719180654953,
+        0.24094760401681248
+      ],
+      "target": [
+        0.6901618414451973,
+        0.6755716048308941
+      ]
+    },
+    {
+      "start": [
+        0.2518465104447058,
+        0.851151449812624
+      ],
+      "target": [
+        0.5017078543633527,
+        0.18621259794364792
+      ]
+    },
+    {
+      "start": [
+        0.36951144172478156,
+        0.09570782994042948
+      ],
+      "target": [
+        0.8366274077904118,
+        0.310869084042929
+      ]
+    },
+    {
+      "start": [
+        0.4312190045389124,
+        0.08232586050295292
+      ],
+      "target": [
+        0.481283852550645,
+        0.7775191459291545
+      ]
+    },
+    {
+      "start": [
+        0.3870069209130238,
+        0.16771222980743206
+      ],
+      "target": [
+        0.6966958952162831,
+        0.6289369740528509
+      ]
+    },
+    {
+      "start": [
+        0.8996075074610587,
+        0.2978531580460986
+      ],
+      "target": [
+        0.5198059990062501,
+        0.24774659627778012
+      ]
+    },
+    {
+      "start": [
+        0.2693778021876862,
+        0.40371500585649583
+      ],
+      "target": [
+        0.9176385452970532,
+        0.5768180250161228
+      ]
+    },
+    {
+      "start": [
+        0.2795367043920703,
+        0.3943115706110764
+      ],
+      "target": [
+        0.6621965616463242,
+        0.8192390147369097
+      ]
+    },
+    {
+      "start": [
+        0.1316473535656454,
+        0.3036902852717448
+      ],
+      "target": [
+        0.11390239619261171,
+        0.8029463775005184
+      ]
+    },
+    {
+      "start": [
+        0.8403661298931551,
+        0.457611714081524
+      ],
+      "target": [
+        0.11202422371382356,
+        0.5028094310455453
+      ]
+    },
+    {
+      "start": [
+        0.7409039702106096,
+        0.22902864571198422
+      ],
+      "target": [
+        0.48659161764742265,
+        0.8790661463952386
+      ]
+    },
+    {
+      "start": [
+        0.10497008597888823,
+        0.4568469740227764
+      ],
+      "target": [
+        0.8879750264215097,
+        0.5235329783911258
+      ]
+    },
+    {
+      "start": [
+        0.8898253865654393,
+        0.445964533691901
+      ],
+      "target": [
+        0.4634299672555588,
+        0.7424917705650369
+      ]
+    },
+    {
+      "start": [
+        0.881924753486318,
+        0.1141518203352974
+      ],
+      "target": [
+        0.8520391859575787,
+        0.6445027297354641
+      ]
+    },
+    {
+      "start": [
+        0.08448643840117509,
+        0.2748457000336865
+      ],
+      "target": [
+        0.41121876221855436,
+        0.734952559108448
+      ]
+    }
+  ],
+  "summary": {
+    "neural": {
+      "hits": 0,
+      "total": 24,
+      "success": 0.0,
+      "wilson95": [
+        0,
+        0.13798057582897535
+      ],
+      "mean_miss": 0.5126440818184806,
+      "median_planning_seconds": 0.21465330000501126,
+      "corrected": [],
+      "regressed": []
+    },
+    "improved-neural": {
+      "hits": 1,
+      "total": 24,
+      "success": 0.041666666666666664,
+      "wilson95": [
+        0.007393265354805126,
+        0.20242226248842232
+      ],
+      "mean_miss": 0.3835391621559244,
+      "median_planning_seconds": 0.15595434998976998,
+      "corrected": [
+        23
+      ],
+      "regressed": []
+    }
+  },
+  "rows": [
+    {
+      "scene": 0,
+      "controller": "neural",
+      "selected": 228,
+      "action": [
+        0.02165500361897063,
+        -0.01317471991015307
+      ],
+      "predicted_miss": 0.07243482646713666,
+      "actual_miss": 0.2182217950757282,
+      "hit": false,
+      "seconds": 0.21879680000711232
+    },
+    {
+      "scene": 0,
+      "controller": "improved-neural",
+      "selected": 60,
+      "action": [
+        0.029067513849711804,
+        0.022699993489962614
+      ],
+      "predicted_miss": 0.022050328995072713,
+      "actual_miss": 0.2936323563538074,
+      "hit": false,
+      "seconds": 0.17332210001768544
+    },
+    {
+      "scene": 1,
+      "controller": "neural",
+      "selected": 1879,
+      "action": [
+        -0.03415895426561466,
+        0.031217503502276776
+      ],
+      "predicted_miss": 0.11246465622440385,
+      "actual_miss": 0.3004689897463665,
+      "hit": false,
+      "seconds": 0.22252559999469668
+    },
+    {
+      "scene": 1,
+      "controller": "improved-neural",
+      "selected": 81,
+      "action": [
+        -0.04776607693248259,
+        0.036226399097148046
+      ],
+      "predicted_miss": 0.010069220572989031,
+      "actual_miss": 0.5125327774454402,
+      "hit": false,
+      "seconds": 0.15197659999830648
+    },
+    {
+      "scene": 2,
+      "controller": "neural",
+      "selected": 1584,
+      "action": [
+        -0.009805494719961946,
+        -0.012959253509141407
+      ],
+      "predicted_miss": 0.024621827250968047,
+      "actual_miss": 0.19435678898986047,
+      "hit": false,
+      "seconds": 0.21174569998402148
+    },
+    {
+      "scene": 2,
+      "controller": "improved-neural",
+      "selected": 1716,
+      "action": [
+        0.06539682896759351,
+        0.019286501041866744
+      ],
+      "predicted_miss": 0.010063622983497923,
+      "actual_miss": 0.11944306299946444,
+      "hit": false,
+      "seconds": 0.16355270001804456
+    },
+    {
+      "scene": 3,
+      "controller": "neural",
+      "selected": 254,
+      "action": [
+        -0.06971497400555977,
+        0.031058258651085077
+      ],
+      "predicted_miss": 0.0672793689492185,
+      "actual_miss": 0.8298834057744309,
+      "hit": false,
+      "seconds": 0.21162980003282428
+    },
+    {
+      "scene": 3,
+      "controller": "improved-neural",
+      "selected": 291,
+      "action": [
+        0.04938191701096177,
+        0.022430173999511457
+      ],
+      "predicted_miss": 0.0053251686198654315,
+      "actual_miss": 0.7718953144187986,
+      "hit": false,
+      "seconds": 0.18121159996371716
+    },
+    {
+      "scene": 4,
+      "controller": "neural",
+      "selected": 976,
+      "action": [
+        -0.02110634719255614,
+        -0.008637672992410259
+      ],
+      "predicted_miss": 0.03745365100499761,
+      "actual_miss": 0.7155237926519726,
+      "hit": false,
+      "seconds": 0.18396260001463816
+    },
+    {
+      "scene": 4,
+      "controller": "improved-neural",
+      "selected": 203,
+      "action": [
+        -0.007386135204070947,
+        0.060055416917133016
+      ],
+      "predicted_miss": 0.0036388366486870423,
+      "actual_miss": 0.12970874677853192,
+      "hit": false,
+      "seconds": 0.12943889998132363
+    },
+    {
+      "scene": 5,
+      "controller": "neural",
+      "selected": 1321,
+      "action": [
+        -0.0015105098193825372,
+        -0.04610824397822674
+      ],
+      "predicted_miss": 0.16953207366297077,
+      "actual_miss": 0.5018713865695725,
+      "hit": false,
+      "seconds": 0.21450679999543354
+    },
+    {
+      "scene": 5,
+      "controller": "improved-neural",
+      "selected": 504,
+      "action": [
+        0.030396901338885316,
+        0.07659614100548226
+      ],
+      "predicted_miss": 0.019805621874169604,
+      "actual_miss": 0.201235152310081,
+      "hit": false,
+      "seconds": 0.18019649997586384
+    },
+    {
+      "scene": 6,
+      "controller": "neural",
+      "selected": 553,
+      "action": [
+        0.0006438590543662869,
+        0.028579266417967458
+      ],
+      "predicted_miss": 0.18455490918549855,
+      "actual_miss": 0.317895690724912,
+      "hit": false,
+      "seconds": 0.17792890005512163
+    },
+    {
+      "scene": 6,
+      "controller": "improved-neural",
+      "selected": 1273,
+      "action": [
+        -0.01870609554313339,
+        0.06860499580434673
+      ],
+      "predicted_miss": 0.008247701131456524,
+      "actual_miss": 0.5396830685330654,
+      "hit": false,
+      "seconds": 0.13876990001881495
+    },
+    {
+      "scene": 7,
+      "controller": "neural",
+      "selected": 1727,
+      "action": [
+        0.09652208856825427,
+        -0.029796357045714497
+      ],
+      "predicted_miss": 0.07010709230855437,
+      "actual_miss": 0.512131036714992,
+      "hit": false,
+      "seconds": 0.22599110001465306
+    },
+    {
+      "scene": 7,
+      "controller": "improved-neural",
+      "selected": 224,
+      "action": [
+        0.08927488450335372,
+        -0.04000443120830173
+      ],
+      "predicted_miss": 0.027754505707550566,
+      "actual_miss": 0.8568916892970551,
+      "hit": false,
+      "seconds": 0.18134279997320846
+    },
+    {
+      "scene": 8,
+      "controller": "neural",
+      "selected": 1643,
+      "action": [
+        0.008081247120236005,
+        -0.0602269607935311
+      ],
+      "predicted_miss": 0.016750552324051617,
+      "actual_miss": 0.5065704659906677,
+      "hit": false,
+      "seconds": 0.22807749995263293
+    },
+    {
+      "scene": 8,
+      "controller": "improved-neural",
+      "selected": 1109,
+      "action": [
+        -0.05127900592178877,
+        0.04841937259150562
+      ],
+      "predicted_miss": 0.01987676363616102,
+      "actual_miss": 0.7374214012893635,
+      "hit": false,
+      "seconds": 0.22395730001153424
+    },
+    {
+      "scene": 9,
+      "controller": "neural",
+      "selected": 1339,
+      "action": [
+        0.05965004821734397,
+        0.010876626768048306
+      ],
+      "predicted_miss": 0.1929954939967822,
+      "actual_miss": 0.6317181848119338,
+      "hit": false,
+      "seconds": 0.19987660000333562
+    },
+    {
+      "scene": 9,
+      "controller": "improved-neural",
+      "selected": 356,
+      "action": [
+        0.03706590190235883,
+        -0.03305900195487355
+      ],
+      "predicted_miss": 0.008727950197996626,
+      "actual_miss": 0.10298689095550738,
+      "hit": false,
+      "seconds": 0.13665609998861328
+    },
+    {
+      "scene": 10,
+      "controller": "neural",
+      "selected": 534,
+      "action": [
+        0.005980060800737174,
+        -0.06437310660825317
+      ],
+      "predicted_miss": 0.0846353752939394,
+      "actual_miss": 0.6375457854584011,
+      "hit": false,
+      "seconds": 0.24213349999627098
+    },
+    {
+      "scene": 10,
+      "controller": "improved-neural",
+      "selected": 1865,
+      "action": [
+        0.013865773668447042,
+        -0.01000225153377685
+      ],
+      "predicted_miss": 0.014786353934277383,
+      "actual_miss": 0.412018243660903,
+      "hit": false,
+      "seconds": 0.14232390001416206
+    },
+    {
+      "scene": 11,
+      "controller": "neural",
+      "selected": 1070,
+      "action": [
+        0.085591800691684,
+        0.01847166459836097
+      ],
+      "predicted_miss": 0.030803541888689525,
+      "actual_miss": 0.47983514828111723,
+      "hit": false,
+      "seconds": 0.24564630002714694
+    },
+    {
+      "scene": 11,
+      "controller": "improved-neural",
+      "selected": 1861,
+      "action": [
+        0.0741015211152281,
+        -0.041268700155335965
+      ],
+      "predicted_miss": 0.016639014446723707,
+      "actual_miss": 0.21329784621989406,
+      "hit": false,
+      "seconds": 0.1425302000134252
+    },
+    {
+      "scene": 12,
+      "controller": "neural",
+      "selected": 794,
+      "action": [
+        -0.006749398024169712,
+        0.06903288240622456
+      ],
+      "predicted_miss": 0.1910760421428537,
+      "actual_miss": 0.7573620242613172,
+      "hit": false,
+      "seconds": 0.22999740001978353
+    },
+    {
+      "scene": 12,
+      "controller": "improved-neural",
+      "selected": 831,
+      "action": [
+        0.03333965664967981,
+        -0.06160309306227997
+      ],
+      "predicted_miss": 0.008602646173558437,
+      "actual_miss": 0.25107186978373547,
+      "hit": false,
+      "seconds": 0.15418000001227483
+    },
+    {
+      "scene": 13,
+      "controller": "neural",
+      "selected": 419,
+      "action": [
+        0.07023203951928361,
+        0.01453449339452398
+      ],
+      "predicted_miss": 0.17490491901124305,
+      "actual_miss": 0.7811769038373614,
+      "hit": false,
+      "seconds": 0.2261551000410691
+    },
+    {
+      "scene": 13,
+      "controller": "improved-neural",
+      "selected": 1138,
+      "action": [
+        0.0425785507395598,
+        -0.026952359937851857
+      ],
+      "predicted_miss": 0.002834417111395656,
+      "actual_miss": 0.20997353778320724,
+      "hit": false,
+      "seconds": 0.13819749996764585
+    },
+    {
+      "scene": 14,
+      "controller": "neural",
+      "selected": 652,
+      "action": [
+        -0.020302786197576424,
+        0.017763312682971367
+      ],
+      "predicted_miss": 0.08581975886101467,
+      "actual_miss": 0.6221802372047089,
+      "hit": false,
+      "seconds": 0.17553930002031848
+    },
+    {
+      "scene": 14,
+      "controller": "improved-neural",
+      "selected": 1475,
+      "action": [
+        0.06626014882610538,
+        -0.08266490716291953
+      ],
+      "predicted_miss": 0.006561438556472479,
+      "actual_miss": 0.7065822707247725,
+      "hit": false,
+      "seconds": 0.1417189000057988
+    },
+    {
+      "scene": 15,
+      "controller": "neural",
+      "selected": 851,
+      "action": [
+        0.09309928712480288,
+        -0.010106912823893513
+      ],
+      "predicted_miss": 0.05117389520686741,
+      "actual_miss": 0.5805987225078716,
+      "hit": false,
+      "seconds": 0.19373940001241863
+    },
+    {
+      "scene": 15,
+      "controller": "improved-neural",
+      "selected": 139,
+      "action": [
+        -0.060181234247185904,
+        0.04497372663851713
+      ],
+      "predicted_miss": 0.008296977307358679,
+      "actual_miss": 0.21116859649451727,
+      "hit": false,
+      "seconds": 0.1665872999583371
+    },
+    {
+      "scene": 16,
+      "controller": "neural",
+      "selected": 1458,
+      "action": [
+        0.011584455097410684,
+        0.047193985195470974
+      ],
+      "predicted_miss": 0.08552070998281923,
+      "actual_miss": 0.08703417464893998,
+      "hit": false,
+      "seconds": 0.2115330999949947
+    },
+    {
+      "scene": 16,
+      "controller": "improved-neural",
+      "selected": 2040,
+      "action": [
+        0.03374216414368239,
+        0.07219817531917025
+      ],
+      "predicted_miss": 0.011042368178672258,
+      "actual_miss": 0.6140434427197926,
+      "hit": false,
+      "seconds": 0.14485080004669726
+    },
+    {
+      "scene": 17,
+      "controller": "neural",
+      "selected": 21,
+      "action": [
+        -0.03192509938104668,
+        0.0164492416582655
+      ],
+      "predicted_miss": 0.024765403665338387,
+      "actual_miss": 0.5584731965548158,
+      "hit": false,
+      "seconds": 0.21479980001458898
+    },
+    {
+      "scene": 17,
+      "controller": "improved-neural",
+      "selected": 201,
+      "action": [
+        -0.022886004377317217,
+        0.008459000483666886
+      ],
+      "predicted_miss": 0.008119171560707057,
+      "actual_miss": 0.33757192436084715,
+      "hit": false,
+      "seconds": 0.152335699996911
+    },
+    {
+      "scene": 18,
+      "controller": "neural",
+      "selected": 1693,
+      "action": [
+        -0.09430851061273055,
+        0.020799729294596832
+      ],
+      "predicted_miss": 0.04065599614344262,
+      "actual_miss": 0.8783961621406123,
+      "hit": false,
+      "seconds": 0.22356549999676645
+    },
+    {
+      "scene": 18,
+      "controller": "improved-neural",
+      "selected": 1159,
+      "action": [
+        0.03803081416999883,
+        -0.016427888155927346
+      ],
+      "predicted_miss": 0.016283494463641787,
+      "actual_miss": 0.4824767175040817,
+      "hit": false,
+      "seconds": 0.15059120004298165
+    },
+    {
+      "scene": 19,
+      "controller": "neural",
+      "selected": 984,
+      "action": [
+        -0.008640168403256253,
+        0.05683680010011469
+      ],
+      "predicted_miss": 0.019114879006706158,
+      "actual_miss": 0.3755407433821373,
+      "hit": false,
+      "seconds": 0.2197872999822721
+    },
+    {
+      "scene": 19,
+      "controller": "improved-neural",
+      "selected": 1822,
+      "action": [
+        0.009228861332553743,
+        0.004942149470923054
+      ],
+      "predicted_miss": 0.009201199597109315,
+      "actual_miss": 0.704756292534183,
+      "hit": false,
+      "seconds": 0.15922579995822161
+    },
+    {
+      "scene": 20,
+      "controller": "neural",
+      "selected": 1779,
+      "action": [
+        0.09357243748984632,
+        -0.012798643391876854
+      ],
+      "predicted_miss": 0.04044261461749423,
+      "actual_miss": 0.6072885697980451,
+      "hit": false,
+      "seconds": 0.2175891000078991
+    },
+    {
+      "scene": 20,
+      "controller": "improved-neural",
+      "selected": 280,
+      "action": [
+        -0.04463390111758778,
+        -0.045950159278014095
+      ],
+      "predicted_miss": 0.005684321557967044,
+      "actual_miss": 0.21686632515962592,
+      "hit": false,
+      "seconds": 0.22116379998624325
+    },
+    {
+      "scene": 21,
+      "controller": "neural",
+      "selected": 1655,
+      "action": [
+        -0.012789476281033083,
+        0.09725410120802054
+      ],
+      "predicted_miss": 0.13147863889187714,
+      "actual_miss": 0.45019885165482576,
+      "hit": false,
+      "seconds": 0.18598389998078346
+    },
+    {
+      "scene": 21,
+      "controller": "improved-neural",
+      "selected": 244,
+      "action": [
+        0.04430709432705637,
+        -0.0822413176693053
+      ],
+      "predicted_miss": 0.00890967756674778,
+      "actual_miss": 0.42641584876832933,
+      "hit": false,
+      "seconds": 0.16308530000969768
+    },
+    {
+      "scene": 22,
+      "controller": "neural",
+      "selected": 908,
+      "action": [
+        -0.012389307835213848,
+        0.03688713932486458
+      ],
+      "predicted_miss": 0.032673979601869005,
+      "actual_miss": 0.3749460029758263,
+      "hit": false,
+      "seconds": 0.20978040003683418
+    },
+    {
+      "scene": 22,
+      "controller": "improved-neural",
+      "selected": 466,
+      "action": [
+        -0.06268890545592697,
+        -0.058013429828036485
+      ],
+      "predicted_miss": 0.003510337387750359,
+      "actual_miss": 0.11888240170233663,
+      "hit": false,
+      "seconds": 0.16300780000165105
+    },
+    {
+      "scene": 23,
+      "controller": "neural",
+      "selected": 1158,
+      "action": [
+        0.021383404376698407,
+        0.013757166128909997
+      ],
+      "predicted_miss": 0.07709513320480402,
+      "actual_miss": 0.3842399038871189,
+      "hit": false,
+      "seconds": 0.2046505999751389
+    },
+    {
+      "scene": 23,
+      "controller": "improved-neural",
+      "selected": 58,
+      "action": [
+        0.03186871621961678,
+        0.02619641854880396
+      ],
+      "predicted_miss": 0.0047547894347356396,
+      "actual_miss": 0.0343841139448457,
+      "hit": true,
+      "seconds": 0.15772869996726513
+    }
+  ],
+  "limitation": "One trained checkpoint per method in a deterministic simulator. Extra training data, geometric inputs, architecture and optimization all changed. No claim of single-factor causation or general robot reliability."
+}

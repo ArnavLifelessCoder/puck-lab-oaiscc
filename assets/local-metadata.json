@@ -1,0 +1,63 @@
+{
+  "seed": 373,
+  "training_samples": 177319,
+  "validation_samples": 17713,
+  "bumper_training_samples": 7832,
+  "wall_training_samples": 15950,
+  "epochs": 1000,
+  "seconds": 1547.0308079000097,
+  "logs": [
+    {
+      "epoch": 1,
+      "validation_local_mse": 0.0014229436852998241
+    },
+    {
+      "epoch": 101,
+      "validation_local_mse": 2.1526182855308212e-07
+    },
+    {
+      "epoch": 201,
+      "validation_local_mse": 3.134215817804009e-07
+    },
+    {
+      "epoch": 301,
+      "validation_local_mse": 4.238861654433982e-08
+    },
+    {
+      "epoch": 401,
+      "validation_local_mse": 6.280867700599838e-08
+    },
+    {
+      "epoch": 501,
+      "validation_local_mse": 9.213078472225692e-09
+    },
+    {
+      "epoch": 601,
+      "validation_local_mse": 4.531839824932707e-09
+    },
+    {
+      "epoch": 701,
+      "validation_local_mse": 3.685282169240814e-09
+    },
+    {
+      "epoch": 801,
+      "validation_local_mse": 5.103460351403586e-09
+    },
+    {
+      "epoch": 901,
+      "validation_local_mse": 2.3348441924184983e-09
+    },
+    {
+      "epoch": 1000,
+      "validation_local_mse": 4.066912778487588e-09
+    }
+  ],
+  "torch": "2.13.0+cpu",
+  "numpy": "2.4.6",
+  "sha256": "5de0225d24b48f4f7595ce697a4f672e45dc627100e7c72bd58019a06411ec08",
+  "training_state_sha256": "a36a4a8de0f93549deafc93fb289cd0bda08eafd7efcf1eefb738d73524da64c",
+  "validation_state_sha256": "8a97895081a4ada965dac4a56726f7f798165551085c22ba954b43c22c8b82d5",
+  "position_rmse": 7.26532132008576e-07,
+  "velocity_rmse": 1.952353404413718e-06,
+  "protocol": "Same data as v2. Learned affine free/wall heads and residual bumper MLP in normal/tangent coordinates. Known contact geometry and coordinate transformations are supplied priors. Every response coefficient is fitted from observations, no simulator response or projection overrides inference. Training seed fixed before evaluation. Final confirmation seed 202609292 remains unused."
+}

@@ -1,0 +1,1445 @@
+{
+  "scope": "Exploratory six-scene sweep, including three scenes inspected during development. Not a held-out control benchmark or evidence of a universal search effect. Model fixed before examining scenes. Same candidate seed and horizon throughout.",
+  "rows": [
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.1452629695864832,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.7353301834711131,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.026833909587540852,
+        -0.01369287429088459
+      ],
+      "speed": 0.030125628791749477
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.1452629695864832,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.7353301834711131,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.026833909587540852,
+        -0.01369287429088459
+      ],
+      "speed": 0.030125628791749477
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.07330211928844395,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.3204863921110365,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.028802072748192627,
+        -0.011524078424051783
+      ],
+      "speed": 0.03102198862284422
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.011842014501566208,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.27628844300972033,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.031111896625249776,
+        -0.012009370491367709
+      ],
+      "speed": 0.03334928921610117
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.17989880122804325,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.2188119239129285,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.03568156740723441,
+        -0.007237426325587429
+      ],
+      "speed": 0.036408166562672706
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.1160398472673898,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.029241018139225996,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.04724397694897016,
+        -0.01606020634163298
+      ],
+      "speed": 0.04989913411764428
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.0684980320166909,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.2910398479099908,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02904664876894492,
+        -0.01135483878413836
+      ],
+      "speed": 0.031187179553788157
+    },
+    {
+      "scene": 0,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.83,
+        0.72
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.052472415015954316,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.1129648607733822,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.03472801503796248,
+        -0.011278121586729032
+      ],
+      "speed": 0.03651343663642183
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.1935618167324265,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 5
+      },
+      "actual": {
+        "error": 0.10372158520306791,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02441742568210866,
+        -0.030178987096549457
+      ],
+      "speed": 0.03881986526399851
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.1935618167324265,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 5
+      },
+      "actual": {
+        "error": 0.10372158520306791,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02441742568210866,
+        -0.030178987096549457
+      ],
+      "speed": 0.03881986526399851
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.1935618167324265,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 5
+      },
+      "actual": {
+        "error": 0.10372158520306791,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02441742568210866,
+        -0.030178987096549457
+      ],
+      "speed": 0.03881986526399851
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.20662892120860699,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.08163042547069504,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.021267475890454954,
+        -0.03347453108740146
+      ],
+      "speed": 0.03965916996449232
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.24853550122704693,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 5
+      },
+      "actual": {
+        "error": 0.47114592900015684,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.06994524892553591,
+        -0.03569183602029737
+      ],
+      "speed": 0.07852544177370147
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.18455001711955027,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6092742584482137,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.013225669283015003,
+        -0.07569488985562291
+      ],
+      "speed": 0.0768416207418777
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.18455001711955027,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6092742584482137,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.013225669283015003,
+        -0.07569488985562291
+      ],
+      "speed": 0.0768416207418777
+    },
+    {
+      "scene": 1,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.82,
+        0.25
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.18369665504666888,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.708972631624155,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.015495670672285529,
+        -0.0678858937700242
+      ],
+      "speed": 0.06963196379924194
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.23431249426737172,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.14416317734134684,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.010135894690946994,
+        -0.035974534102409576
+      ],
+      "speed": 0.037375171773135665
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.22647171675765343,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.1281024364314581,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.014834431232937846,
+        -0.021072369440411513
+      ],
+      "speed": 0.025770236782729626
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.1792156773148722,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.3151234548941495,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.016611586071728753,
+        -0.03377222970325484
+      ],
+      "speed": 0.03763652867823839
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.05438475651951205,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.41661561580791595,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.019352379409719806,
+        -0.02788579150439393
+      ],
+      "speed": 0.033943069346249105
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.21669232542082012,
+        "hit": false,
+        "outside": 5,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.7652334970248856,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.002581353391514622,
+        -0.06594007166500547
+      ],
+      "speed": 0.06599057839205488
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.1482914399971213,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.14106393184412147,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.012293416298445107,
+        -0.04591487531058596
+      ],
+      "speed": 0.0475321350148879
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.1482914399971213,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.14106393184412147,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.012293416298445107,
+        -0.04591487531058596
+      ],
+      "speed": 0.0475321350148879
+    },
+    {
+      "scene": 2,
+      "start": [
+        0.16,
+        0.7
+      ],
+      "target": [
+        0.3,
+        0.24
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.10871838029504445,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.3904926300639569,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.018305570366142727,
+        -0.02782870336885095
+      ],
+      "speed": 0.03330961779458448
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.6233233651967304,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.8302186509037922,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.01706424753921987,
+        0.02077897769127118
+      ],
+      "speed": 0.026887812443077565
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.5012561810409919,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.3271318383501894,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.030020664761770982,
+        0.017163246525434994
+      ],
+      "speed": 0.03458059201389552
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.43428033184498843,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.5910112621836886,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.029192572898915643,
+        0.021785500683294035
+      ],
+      "speed": 0.03642546296864748
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.4171153391920481,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6699702230078374,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.03240787802666167,
+        0.022009153557230807
+      ],
+      "speed": 0.03917490776628256
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.2546425186152624,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.38559450079871704,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.026524788273360272,
+        0.05380056277120383
+      ],
+      "speed": 0.05998387239454314
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.2546425186152624,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.38559450079871704,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.026524788273360272,
+        0.05380056277120383
+      ],
+      "speed": 0.05998387239454314
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.22649354307752245,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.42347145925394775,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.018852063432608306,
+        0.06461196088379337
+      ],
+      "speed": 0.0673060605362989
+    },
+    {
+      "scene": 3,
+      "start": [
+        0.8,
+        0.2
+      ],
+      "target": [
+        0.2,
+        0.75
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.14853073575078332,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6894579821234035,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.009512679264237002,
+        0.10001888528309577
+      ],
+      "speed": 0.10047023678710684
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.1398111453616776,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.2212947767321254,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02520311339720711,
+        0.013801860439729856
+      ],
+      "speed": 0.028734792090952397
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.08545327359367465,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.22170423373101075,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.027212929928872084,
+        0.010331094970836178
+      ],
+      "speed": 0.029107989944517614
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.03208708425204428,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.19031884916492603,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02187185917805406,
+        0.010558434986584528
+      ],
+      "speed": 0.024287008322775364
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.014175801551021753,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.17153662750390927,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02101352261790295,
+        0.009700463844975065
+      ],
+      "speed": 0.0231444838270545
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.23532623091554228,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.19643083178490853,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.02963388081274034,
+        0.00734157749091988
+      ],
+      "speed": 0.030529750278685243
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.1987737446707433,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.15774981168637667,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.016919585306401197,
+        -0.01778710758156891
+      ],
+      "speed": 0.02454900330072269
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.12008013888748316,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.16164936351415013,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.051135594018455376,
+        0.010095029618708494
+      ],
+      "speed": 0.05212253446085379
+    },
+    {
+      "scene": 4,
+      "start": [
+        0.18,
+        0.2
+      ],
+      "target": [
+        0.8,
+        0.3
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.03954955937908932,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.15589195765812203,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        0.021857319540912162,
+        0.009289886686530096
+      ],
+      "speed": 0.02374961920036003
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.04,
+      "budget": 32,
+      "predicted": {
+        "error": 0.08665552054739364,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.23437910183918476,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.010749259577952256,
+        0.021802858846884994
+      ],
+      "speed": 0.024308665849268437
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.04,
+      "budget": 128,
+      "predicted": {
+        "error": 0.08665552054739364,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.23437910183918476,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.010749259577952256,
+        0.021802858846884994
+      ],
+      "speed": 0.024308665849268437
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.04,
+      "budget": 512,
+      "predicted": {
+        "error": 0.07076436386176314,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.3647756393366499,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.010160472507779995,
+        0.03670504491183082
+      ],
+      "speed": 0.038085371516644956
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.04,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.07029065013143085,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.16225002436703054,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.010586122930323797,
+        0.03243358721718681
+      ],
+      "speed": 0.03411749666184187
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.11,
+      "budget": 32,
+      "predicted": {
+        "error": 0.08772656805764252,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6311200297894543,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.011020989196314503,
+        0.05121077989916252
+      ],
+      "speed": 0.05238326241029427
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.11,
+      "budget": 128,
+      "predicted": {
+        "error": 0.08772656805764252,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6311200297894543,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.011020989196314503,
+        0.05121077989916252
+      ],
+      "speed": 0.05238326241029427
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.11,
+      "budget": 512,
+      "predicted": {
+        "error": 0.08772656805764252,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.6311200297894543,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.011020989196314503,
+        0.05121077989916252
+      ],
+      "speed": 0.05238326241029427
+    },
+    {
+      "scene": 5,
+      "start": [
+        0.7,
+        0.8
+      ],
+      "target": [
+        0.25,
+        0.8
+      ],
+      "maxSpeed": 0.11,
+      "budget": 2048,
+      "predicted": {
+        "error": 0.0561408015258526,
+        "hit": true,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "actual": {
+        "error": 0.5542244029457595,
+        "hit": false,
+        "outside": 0,
+        "obstacleSteps": 0
+      },
+      "action": [
+        -0.010088767475622384,
+        0.05556965394527597
+      ],
+      "speed": 0.056478045900817966
+    }
+  ]
+}

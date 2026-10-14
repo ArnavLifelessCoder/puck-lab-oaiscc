@@ -1,0 +1,13 @@
+Training transitions: 30,000
+Validation one-step position RMSE: 0.238% of table width
+Target radius: 6.5% of table width. Position RMSE is NOT target success.
+  32 candidates | predicted miss 0.180 | actual miss 0.219
+ 128 candidates | predicted miss 0.116 | actual miss 0.029
+ 512 candidates | predicted miss 0.068 | actual miss 0.291
+2048 candidates | predicted miss 0.052 | actual miss 0.113
+Mean one-step error: 0.002237170661917542
+Final free-rollout error: 0.22648577419814733
+Mean optimism across pool: -0.11725695518325766
+Optimism of selected shot: 0.22254181589330024
+Loaded your actual trained checkpoint: results\runs\verification-notebook-v3\network.json
+2/24 targets. Add your evidence to results\runs\verification-notebook-v3\team-report.json

@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "training_seed": 71,
+  "calibration_data": "Exactly the original 1200 training trajectories, no extra observations",
+  "development_seed": 8301,
+  "development_scenes": 24,
+  "confirmation_seed": 9403,
+  "confirmation_scenes": 96,
+  "horizon": 35,
+  "budget": 2048,
+  "candidate_seed": 123,
+  "max_speed": 0.11,
+  "target_radius": 0.065,
+  "selection": "Uniform valid starts and targets in [0.08,0.92]^2 outside bumper+target radius; separation >=0.30. No selection by success or model error.",
+  "controllers": [
+    "neural",
+    "contact-repair",
+    "calibrated",
+    "oracle"
+  ],
+  "knowledge": "Contact-repair and calibrated controllers know position integration, table geometry and contact structure. Drag and restitution are fitted from training observations. Oracle directly uses simulator dynamics and is a privileged feasibility baseline, not an ML repair.",
+  "decision": "Freeze fitting and controller definitions before running confirmation. Report success counts, per-scene regressions, Wilson intervals and timing; do not select seeds or retune after confirmation."
+}

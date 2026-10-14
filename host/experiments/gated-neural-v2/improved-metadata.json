@@ -1,0 +1,87 @@
+{
+  "seed": 273,
+  "validation_seed": 274,
+  "training_samples": 177319,
+  "contact_training_samples": 23336,
+  "validation_samples": 17713,
+  "contact_validation_samples": 2331,
+  "epochs": 600,
+  "architecture": "geometry-routed linear neural free head and residual ReLU contact head [11,64,64,4]",
+  "seconds": 44.52619743347168,
+  "logs": [
+    {
+      "epoch": 1,
+      "training_contact_mse": 0.014632709391407456,
+      "validation_contact_mse": 0.011588163673877716
+    },
+    {
+      "epoch": 51,
+      "training_contact_mse": 0.0036628814052565633,
+      "validation_contact_mse": 0.00367872160859406
+    },
+    {
+      "epoch": 101,
+      "training_contact_mse": 0.0017561960330757865,
+      "validation_contact_mse": 0.0017835379112511873
+    },
+    {
+      "epoch": 151,
+      "training_contact_mse": 0.0012893509534007226,
+      "validation_contact_mse": 0.0012621443020179868
+    },
+    {
+      "epoch": 201,
+      "training_contact_mse": 0.0011153526311720484,
+      "validation_contact_mse": 0.0010499519994482398
+    },
+    {
+      "epoch": 251,
+      "training_contact_mse": 0.0009211613241114414,
+      "validation_contact_mse": 0.000916237710043788
+    },
+    {
+      "epoch": 301,
+      "training_contact_mse": 0.0008946252609805846,
+      "validation_contact_mse": 0.0009339101961813867
+    },
+    {
+      "epoch": 351,
+      "training_contact_mse": 0.0008527921592701134,
+      "validation_contact_mse": 0.0008683677297085524
+    },
+    {
+      "epoch": 401,
+      "training_contact_mse": 0.0008268954384509112,
+      "validation_contact_mse": 0.0008417085045948625
+    },
+    {
+      "epoch": 451,
+      "training_contact_mse": 0.0007819213717784778,
+      "validation_contact_mse": 0.0007931264117360115
+    },
+    {
+      "epoch": 501,
+      "training_contact_mse": 0.0007763984228195709,
+      "validation_contact_mse": 0.000788181321695447
+    },
+    {
+      "epoch": 551,
+      "training_contact_mse": 0.0007699889387586753,
+      "validation_contact_mse": 0.0007771301316097379
+    },
+    {
+      "epoch": 600,
+      "training_contact_mse": 0.0007607878511188884,
+      "validation_contact_mse": 0.0007741520530544221
+    }
+  ],
+  "position_rmse": 0.00048349639757865753,
+  "velocity_rmse": 0.0014938728631785983,
+  "torch": "2.13.0+cpu",
+  "numpy": "2.4.6",
+  "sha256": "fcd63c56e8e6837890960d0fd3d904ec1892d72764e2a5f0812a43903df006c4",
+  "training_state_sha256": "a36a4a8de0f93549deafc93fb289cd0bda08eafd7efcf1eefb738d73524da64c",
+  "validation_state_sha256": "8a97895081a4ada965dac4a56726f7f798165551085c22ba954b43c22c8b82d5",
+  "warm_start": "dense-neural-v1 contact weights; preserved under host/experiments",
+  "protocol": "Additional training observations spanning speed 0..0.115 and near boundaries. A geometric contact gate routes to learned neural outputs; no reflection/restitution equations run in inference. The free branch is a supervised linear neural layer fit with least squares; the contact branch is a trained residual MLP. This is a combined architecture/data/feature repair. New confirmation scenes remain unused until development selection is complete."
+}

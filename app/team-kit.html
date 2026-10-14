@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Puck Lab | Team kit</title><link rel="stylesheet" href="style.css"><script src="mode.js"></script><link rel="icon" href="data:,"></head>
+<body><header><a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="pl-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#pl-g)"/><path d="M7 23C10 10 19 9 23 17" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="2" stroke-dasharray="2.4 3.2" stroke-linecap="round"/><circle cx="23" cy="19.5" r="4.3" fill="#fff"/></svg><span>Puck Lab</span></a><nav class="tabs" aria-label="Sections"><a href="index.html">Lab</a><a href="results.html" data-host-only>Results</a><a href="how-it-works.html">How it works</a><a href="team-kit.html" aria-current="page">Team kit</a></nav><a class="host-chip" data-host-only href="index.html?host=0" title="Switch back to the student view">Host view · exit</a></header>
+<main class="page">
+<p class="eyebrow">Team kit</p><h1>Train your own network, then watch it move.</h1>
+<p class="intro">Your team trains a small neural network on a laptop. The result is one file of learned weights. You load that file into the Lab and see your network plan real shots. No account, API key or ChatGPT Work subscription is needed.</p>
+
+<section class="card"><h2>Downloads</h2>
+<div class="downloads">
+<a class="download" href="../packages/student-kit.zip" download><strong>Student kit (zip)</strong><span>Everything below plus the training data. Start here.</span></a>
+<a class="download" href="../student/team-notebook.ipynb" download><strong>Team notebook</strong><span>Guided diagnosis and one named experiment</span></a>
+<a class="download" href="../student/TEAM_BRIEF.pdf" target="_blank" rel="noopener"><strong>Team brief (PDF)</strong><span>The investigation, the rules and what to submit. Also in the kit as .md.</span></a>
+<a class="download" href="../student/EXPERIMENTS.pdf" target="_blank" rel="noopener"><strong>Experiment cards (PDF)</strong><span>Hypotheses, concrete edits and what would disprove them. Also in the kit as .md.</span></a>
+</div>
+<p class="hint">Unzip the whole kit and keep the <code>assets/</code> and <code>student/</code> folders side by side. Host solutions and the final test scenes are not in the kit.</p></section>
+
+<section class="card"><h2>Ground rules</h2>
+<ul class="plain">
+<li><strong>The change must come from learned weights.</strong> The network's prediction of the next state has to come from what it learned. Copying the simulator's equations, swapping in a physics model, or asking the simulator to pick the shot does not count.</li>
+<li><strong>Known geometry is allowed as an input or to route between branches,</strong> as long as you say you used it.</li>
+<li><strong>Change one thing at a time</strong> and use a new run name every time. Keep every run, including the ones that fail.</li>
+<li><strong>Write your hypothesis first,</strong> and what result would prove it wrong, before you run anything.</li>
+<li><strong>Do not change the planner, the scenes, the seed or the scoring.</strong> They stay fixed so results can be compared.</li>
+<li><strong>Report everything:</strong> new successes <em>and</em> new failures, not just the wins.</li>
+<li><strong>Do not look for the final test scenes or the hosts' solution.</strong> The hosts score your frozen run once on separate scenes.</li>
+</ul></section>
+
+<section class="card"><h2>Five steps</h2>
+<ol class="steps">
+<li><h3>Install once, before the session</h3><p>Open a terminal in <code>student/</code>. PyTorch is a large download, so do this on good Wi-Fi ahead of time.</p><pre>python -m pip install -r training-requirements.txt</pre></li>
+<li><h3>Train a baseline</h3><p>This trains the plain starter network, scores it on the 24 development scenes, and saves a run folder.</p><pre>python run_experiment.py --name baseline</pre></li>
+<li><h3>Change one thing</h3><p>Write your hypothesis first, including what result would prove it wrong. Then change a single factor and compare against the baseline. Use a new name every time.</p><pre>python run_experiment.py --name contacts --contact-weight 5 --compare baseline</pre><p class="hint">The output lists new successes and new failures. A change can make things worse; keep that result and explain it.</p></li>
+<li><h3>Load your weights in the Lab</h3><p>In the <a href="index.html">Lab</a>, use <strong>Try your team’s trained model</strong> and choose <code>student/results/runs/&lt;your-run&gt;/network.json</code>. The model selector switches to <em>Your team neural network</em>. Find a shot and execute it.</p></li>
+<li><h3>Hand in one run</h3><p>Give the hosts your run folder, any code you edited, and a short note: your hypothesis, what disproves it, what you saw, and what got worse.</p></li>
+</ol></section>
+
+<section class="card"><h2>Questions teams ask</h2>
+<dl class="faq">
+<dt>What is <code>network.json</code>?</dt><dd>The learned weights and biases of your network, plus the scaling numbers it needs, saved as text. It is about 60 KB. It is the trained model, not a picture or a report.</dd>
+<dt>Is my file uploaded anywhere?</dt><dd>No. The Lab reads it in your browser tab using the file picker. Nothing is sent to a server, and it disappears when you close the tab. Training itself runs only on your laptop.</dd>
+<dt>How long does training take?</dt><dd>Seconds. The starter trains for 40 short passes over 24,000 examples on the CPU, which took about 2–6 seconds in rehearsal. A whole run, including scoring all 24 scenes, took about 15 seconds on a laptop-class CPU. The slow part is the one-off PyTorch install, not the training.</dd>
+<dt>What score should my baseline get?</dt><dd>About 2 out of 24 development scenes in rehearsal. The original network shown in the Lab scores 0/24, so do not mix the two up. A change that scores 0/24 or worse than your baseline is a normal result: keep it and explain what it rules out.</dd>
+<dt>Do I need a GPU or a paid account?</dt><dd>No. CPU is enough, and no API key or ChatGPT Work subscription is needed.</dd>
+<dt>Can I edit the code?</dt><dd>Yes. The files to edit are <code>train_repair.py</code> (layers, loss, data, training), <code>neural_model.py</code> (inputs and inference) and <code>repair.py</code> (the submission interface). Do not change the planner, the scenes or the scoring.</dd>
+<dt>What counts as a valid repair?</dt><dd>The change in state must come from learned weights. Copying the simulator’s equations, substituting a physics model, or querying the simulator to rank actions does not count.</dd>
+</dl></section>
+
+<section class="card"><h2>Team roles</h2>
+<div class="cols">
+<div><h3>Operator</h3><p>Runs the code. Rotate this role.</p></div>
+<div><h3>Designer</h3><p>Chooses the single variable to change.</p></div>
+<div><h3>Skeptic</h3><p>Says what result would disprove the hypothesis.</p></div>
+<div><h3>Recorder</h3><p>Keeps run names, settings and failures.</p></div>
+</div></section>
+
+<p class="more-links">Want the background first? Read <a href="how-it-works.html">how it works</a><span data-host-only> or see the <a href="results.html">results</a></span>.</p>
+</main><footer><span>Learned dynamics / deterministic simulator / no scripted answers</span><span>Local CPU inference · one shared screen</span></footer></body></html>

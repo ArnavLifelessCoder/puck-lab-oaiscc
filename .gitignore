@@ -1,0 +1,11 @@
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+student/results/
+
+dist-student/
+dist-host/
+deployment/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,13 @@
+{
+  "comparison": "original neural vs improved neural",
+  "development": "Existing 24 development scenes; may be used to assess or revise the candidate.",
+  "confirmation_seed": 202609291,
+  "confirmation_count": 96,
+  "candidate_seed": 123,
+  "budget": 2048,
+  "horizon": 35,
+  "max_speed": 0.11,
+  "target_radius": 0.065,
+  "freeze_rule": "Choose the neural checkpoint using training/validation/development only; record its hash before the new confirmation partition is evaluated. Previous physics-reference confirmation scenes are not a fresh test for this iteration.",
+  "inference_rule": "Improved dynamics must return network outputs directly. No calibrated coefficients, contact response replacement, simulator queries or truth-based action selection."
+}

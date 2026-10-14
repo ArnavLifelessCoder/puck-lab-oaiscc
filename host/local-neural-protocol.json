@@ -1,0 +1,13 @@
+{
+  "comparison": "original neural, previous improved neural, local-coordinate neural candidate",
+  "development": "Existing 24 development scenes; may be used to assess or revise the candidate.",
+  "confirmation_seed": 202609292,
+  "confirmation_count": 96,
+  "candidate_seed": 123,
+  "budget": 2048,
+  "horizon": 35,
+  "max_speed": 0.11,
+  "target_radius": 0.065,
+  "freeze_rule": "Use training/validation and existing 24 development scenes to select. Freeze all checkpoint hashes before evaluating fresh seed 202609292 once. The previous 96-scene neural confirmation is already inspected and not used for selection.",
+  "inference_rule": "Improved dynamics must return network outputs directly. No calibrated coefficients, contact response replacement, simulator queries or truth-based action selection."
+}
